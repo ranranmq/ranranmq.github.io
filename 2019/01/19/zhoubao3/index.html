@@ -5,16 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>zhoubao 3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="周报第三次 本周对链表的删除和插入进行了具体操作；phyton的简单学习。   单链表的删除//单链表的删除:将单链表中第i个节点删除//删除单链表的头元素、中间元素、尾元素//注：单链表的长度为n，则单链表删除第i个节点时，必须保证1=&amp;lt;i&amp;lt;=n,否则不合法。而当i=n+1时。虽然被删节点不存在，但其前驱节点存在，它是终端节点。因此被删节点的直接前驱存在并不意味着被删节点就一定存在，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zhoubao 3">
 <meta property="og:url" content="http://yoursite.com/2019/01/19/zhoubao3/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="周报第三次 本周对链表的删除和插入进行了具体操作；phyton的简单学习。   单链表的删除//单链表的删除:将单链表中第i个节点删除//删除单链表的头元素、中间元素、尾元素//注：单链表的长度为n，则单链表删除第i个节点时，必须保证1=&amp;lt;i&amp;lt;=n,否则不合法。而当i=n+1时。虽然被删节点不存在，但其前驱节点存在，它是终端节点。因此被删节点的直接前驱存在并不意味着被删节点就一定存在，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-19T07:34:28.485Z">
+<meta property="og:updated_time" content="2019-01-19T07:57:01.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="zhoubao 3">
+<meta name="twitter:description" content="周报第三次 本周对链表的删除和插入进行了具体操作；phyton的简单学习。   单链表的删除//单链表的删除:将单链表中第i个节点删除//删除单链表的头元素、中间元素、尾元素//注：单链表的长度为n，则单链表删除第i个节点时，必须保证1=&amp;lt;i&amp;lt;=n,否则不合法。而当i=n+1时。虽然被删节点不存在，但其前驱节点存在，它是终端节点。因此被删节点的直接前驱存在并不意味着被删节点就一定存在，">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -71,13 +74,35 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      zhoubao 3
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="周报"><a href="#周报" class="headerlink" title="周报"></a>周报</h1><h2 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h2><blockquote>
+<p>本周对链表的删除和插入进行了具体操作；phyton的简单学习。</p>
+</blockquote>
+<ul>
+<li>单链表的删除<br>//单链表的删除:将单链表中第i个节点删除<br>//删除单链表的头元素、中间元素、尾元素<br>//注：单链表的长度为n，则单链表删除第i个节点时，必须保证1=&lt;i&lt;=n,否则不合法。而当i=n+1<br>时。虽然被删节点不存在，但其前驱节点存在，它是终端节点。因此被删节点的直接前驱存在并不意味着被删节点就一定存在，仅当p存在，且p不是终端节点同时满足index&lt;i时，才能确定被删节点存在；<br>ListNode <em>deleteNode(ListNode </em>head,int pos)//pos从1开始，1表示删除链表的头元素</li>
+</ul>
+<p>{<br>        ListNode <em>p=head;<br>        if(p-&gt;next==nullptr)  //链表为空时<br>        {<br>             cout&lt;&lt;”链表为空”&lt;&lt;endl;<br>            return nullptr;<br>        }<br>        ListNode </em>node=nullptr;<br>        int index=1;<br>        while(p!=nullptr&amp;&amp;index&lt;pos)<br>        {<br>            p=p-&gt;next;<br>            ++index;<br>        }<br>        if(p!=nullptr&amp;&amp;p-&gt;next!=nullptr)<br>        {<br>        node=p-&gt;next;<br>        p-&gt;next=node-&gt;next;<br>        delete node;<br>        }<br>        return head;<br>}</p>
+<ul>
+<li>单链表的插入<br>//单链表的插入<br>//将值为data的新节点插入到链表的第i（i=pos）个节点上<br>//注;在链表中第i（i从0开始取值）个位置插入，分三种情况：插入到链表首部、中间、尾部<br>ListNode <em>insertList(ListNode </em>head,int pos,int data)//note：这里head为单链表的头节点，而非第一个节点<br>{<br>   ListNode <em>newNode=new ListNode(data);<br>   ListNode </em>p=head;<br>   int index=1;<br>   while(p!=nullptr&amp;&amp;index&lt;pos)<br>   {<pre><code>p=p-&gt;next;
+++index;
+</code></pre>   }<br>   newNode-&gt;next=p-&gt;next;<br>   p-&gt;next=newNode;<br>   return head;<br>}</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/19/zhoubao3/" data-id="cjr3698s70000hkw2g90725ih" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/19/zhoubao3/" data-id="cjr36kabs00020kw2s22opemu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +151,7 @@
       <ul>
         
           <li>
-            <a href="/2019/01/19/zhoubao3/">(no title)</a>
+            <a href="/2019/01/19/zhoubao3/">zhoubao 3</a>
           </li>
         
           <li>
