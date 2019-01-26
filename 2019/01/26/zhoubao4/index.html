@@ -5,15 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>zhoubao 3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="周报第四次 本周主要完成了学生信息管理系统  每位学生记录包含有学号、姓名、性别、出生日期、三门功课的成绩（高等数学、大学英语、C语言）、总分和平均分 。系统菜单：（1）录入学生信息struct student  creat(){  struct student  head,p1,p2;  n=0;  p1=p2=(struct student *)malloc(LEN);  printf(“输入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zhoubao 3">
+<meta property="og:url" content="http://yoursite.com/2019/01/26/zhoubao4/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="周报第四次 本周主要完成了学生信息管理系统  每位学生记录包含有学号、姓名、性别、出生日期、三门功课的成绩（高等数学、大学英语、C语言）、总分和平均分 。系统菜单：（1）录入学生信息struct student  creat(){  struct student  head,p1,p2;  n=0;  p1=p2=(struct student *)malloc(LEN);  printf(“输入">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-26T06:06:55.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="zhoubao 3">
+<meta name="twitter:description" content="周报第四次 本周主要完成了学生信息管理系统  每位学生记录包含有学号、姓名、性别、出生日期、三门功课的成绩（高等数学、大学英语、C语言）、总分和平均分 。系统菜单：（1）录入学生信息struct student  creat(){  struct student  head,p1,p2;  n=0;  p1=p2=(struct student *)malloc(LEN);  printf(“输入">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-zhoubao4" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-zhoubao4" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/01/26/zhoubao4/" class="article-date">
   <time datetime="2019-01-26T05:35:09.454Z" itemprop="datePublished">2019-01-26</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/26/zhoubao4/">zhoubao 3</a>
+    <h1 class="article-title" itemprop="name">
+      zhoubao 3
     </h1>
   
 
@@ -165,201 +167,19 @@ printf(&quot;\n&quot;);
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-zhoubao3" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/19/zhoubao3/" class="article-date">
-  <time datetime="2019-01-19T07:34:28.484Z" itemprop="datePublished">2019-01-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/19/zhoubao3/">zhoubao 3</a>
-    </h1>
+    <a href="/2019/01/19/zhoubao3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">zhoubao 3</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="周报"><a href="#周报" class="headerlink" title="周报"></a>周报</h1><h2 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h2><blockquote>
-<p>本周对链表的删除和插入进行了具体操作；phyton的简单学习。</p>
-</blockquote>
-<ul>
-<li>单链表的删除<br>//单链表的删除:将单链表中第i个节点删除<br>//删除单链表的头元素、中间元素、尾元素<br>//注：单链表的长度为n，则单链表删除第i个节点时，必须保证1=&lt;i&lt;=n,否则不合法。而当i=n+1<br>时。虽然被删节点不存在，但其前驱节点存在，它是终端节点。因此被删节点的直接前驱存在并不意味着被删节点就一定存在，仅当p存在，且p不是终端节点同时满足index&lt;i时，才能确定被删节点存在；<br>ListNode <em>deleteNode(ListNode </em>head,int pos)//pos从1开始，1表示删除链表的头元素</li>
-</ul>
-<p>{<br>        ListNode <em>p=head;<br>        if(p-&gt;next==nullptr)  //链表为空时<br>        {<br>             cout&lt;&lt;”链表为空”&lt;&lt;endl;<br>            return nullptr;<br>        }<br>        ListNode </em>node=nullptr;<br>        int index=1;<br>        while(p!=nullptr&amp;&amp;index&lt;pos)<br>        {<br>            p=p-&gt;next;<br>            ++index;<br>        }<br>        if(p!=nullptr&amp;&amp;p-&gt;next!=nullptr)<br>        {<br>        node=p-&gt;next;<br>        p-&gt;next=node-&gt;next;<br>        delete node;<br>        }<br>        return head;<br>}</p>
-<ul>
-<li>单链表的插入<br>//单链表的插入<br>//将值为data的新节点插入到链表的第i（i=pos）个节点上<br>//注;在链表中第i（i从0开始取值）个位置插入，分三种情况：插入到链表首部、中间、尾部<br>ListNode <em>insertList(ListNode </em>head,int pos,int data)//note：这里head为单链表的头节点，而非第一个节点<br>{<br>   ListNode <em>newNode=new ListNode(data);<br>   ListNode </em>p=head;<br>   int index=1;<br>   while(p!=nullptr&amp;&amp;index&lt;pos)<br>   {<pre><code>p=p-&gt;next;
-++index;
-</code></pre>   }<br>   newNode-&gt;next=p-&gt;next;<br>   p-&gt;next=newNode;<br>   return head;<br>}</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/19/zhoubao3/" data-id="cjrd2pw990000i4w2f0zip84a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-zhoubao 2" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/29/zhoubao 2/" class="article-date">
-  <time datetime="2018-12-29T05:25:57.662Z" itemprop="datePublished">2018-12-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/29/zhoubao 2/">zhoubao 2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="周报"><a href="#周报" class="headerlink" title="周报"></a>周报</h1><h2 id="第二次"><a href="#第二次" class="headerlink" title="第二次"></a>第二次</h2><blockquote>
-<p>本周主要进行了期末的复习，以及C语言文件的学习。文件主要学习了如何打开文件，关闭文件以及文件的顺序读写。</p>
-</blockquote>
-<ul>
-<li>打开文件，即建立文件的各种有关信息，并使文件指针指向该文件，以便进行其他操作。要打开指定文件可使用fopen()函数。再打开文件时，需要知道一下几点：</li>
-</ul>
-<ol>
-<li>需要打开的文件名，也就是准备访问的文件名。</li>
-<li>使用文件的方式（“读”还是“写”）。</li>
-<li>让哪一个指针变量指向被打开的文件。</li>
-</ol>
-<ul>
-<li>关闭文件，文件打开后若不再继续使用，则使用fclosess()函数将指定的文件关闭，并将FILE文件指针的相关资源及所占用的缓冲区归还给系统。</li>
-<li>文件的顺序读写</li>
-</ul>
-<ol>
-<li>单字符读写函数，每次可从文件读出或向文件写入一个字符。（1）读单字符函数fgetc()，函数原型：ch=fgetc(FILE<em>fp)；功能为：读取文件指针fp目前所指文件位置中的字符，读取完毕，文件指针自动往下移一个字符位置，若文件指针已经到文件结尾，返回-1。（2）写单字符函数fputc（），函数原型：int fputc（char ch, FILE </em>fp）；功能为：把字符ch写入文件指针fp所指向的文件的位置，成功返回字符ASCII码，失败返回EOF。</li>
-<li>字符串读写函数，（1）读字符串函数fgets()，函数原型：char <em>fgets（char </em>str,int n, FILE <em>fp）；功能为：在文件指针fp目前所指文件位置读取n个字符并放入str字符数组。如果读不到字符串时，返回NULL。（2）写字符串函数fputs()，函数原型：int  </em>fgets（char <em>str, FILE </em>fp）；功能为:将字符串str写入文件指针fp所指文件位置。成功返回字符非零值，失败返回EOF。</li>
-<li>格式化字符串读写函数，（1）格式化字符串读函数fscanf(),函数原型：int fscanf(FILE <em>fp,”格式化字符串”，【输入项地址链表】)；功能为：从文件指针fp所指向的文件中按照格式字符串指定的格式将文件中的数据送到输入项地址表中。若读取数据成功会返回所读取数据的个数，并将数据按照指定格式存入内存中的变量或数组中，文件指针自动向下移动，若读取失败则返回EOF。（2）格式化字符串写函数fprintf(),函数原型：int fprintf(FILE </em>fp,”格式化字符串”,【输入项地址链表】)；功能为：将输出项表中的变量值按照格式字符串指定的格式输出到文件指针fp所指向的文件位置。</li>
-<li>数据块读写操作，（1）数据块读函数fread（），函数原型：int fread(void <em>buffer, int size,int count,FILE </em>fp);功能为：从文件指针fp目前所指文件当前位置开始，一次读入size个字节，重复count次，并将读取的数据存储到buffer开始内存区中，同时将读写位置指针后移size <em>count。（2）数据块写函数fwrite（），函数原型：int fwrite(void </em>buffer, int size,int count,FILE <em>fp);功能为：从buffer所指向的内存区开始，一次输出size个字节，重复count次，并将输出的数据存入fp所指向的文件中，同时将读写位置指针后移size </em>count次。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/29/zhoubao 2/" data-id="cjrd2pwa10001i4w2957ckndv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-zhoubao" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/22/zhoubao/" class="article-date">
-  <time datetime="2018-12-22T10:55:34.626Z" itemprop="datePublished">2018-12-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/22/zhoubao/">zhoubao</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="周报"><a href="#周报" class="headerlink" title="周报"></a>周报</h1><blockquote>
-<p>本周搭建了一个博客，学习了C 语言链表，以及进行了期末的复习。</p>
-</blockquote>
-<p>搭博客的具体操作：<br> 1.搭建 Node.js环境，搭建 Git 环境<br> 2.注册Github ，创建仓库时要注意Repository name 一定要使用自己的用户名<br> 3.使用 npm安装 Hexo，（1）建立一个文件夹，在文件夹中右键，打开 Git Bash Here，然后输入npm install hexo-cli -g。（2）输入命令来初始化 Hexo：hexo init yourname.github.io。（3）输入指令，安装server:npm install hexo -server –save；运行本地Hexo 服务，输入 hexo server 。<br> 4.用SSH keys 让Hexo与 Github 建立联系。（1）生成 SSH keys：输入指令ssh-keygen -t rsa -C “youremail”。（2）添加刚才生成的SSH keys到Github上。（3）测试是否设置成功输入指令ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>。（4）配置Git个人信息，输入下面的指令：git config –global user.name “yourname”；git config –global user.email “youremail”。（5）配置Deployment。（6）提交本地文件到Github。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/22/zhoubao/" data-id="cjrd2pwar0003i4w25cegejz6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/22/hello-world/" class="article-date">
-  <time datetime="2018-12-22T09:55:50.504Z" itemprop="datePublished">2018-12-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/22/hello-world/" data-id="cjrd2pwan0002i4w2cimydtfg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
